@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#List"
+    manageTabs="function(tab,noSwitch){var tabs=['props','fulltext','fulltextwithframe','imagetext','imagetextwithframe','imageplustext'];var index=tabs.indexOf(tab);if(index==-1) return;for(var i=1;i&lt;tabs.length;i++){if(index==i){this.unhideTabStripItem(i);}else{this.hideTabStripItem(i);}}this.doLayout();if(!noSwitch)this.activate(index);}"
+    title="List"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <list
+            jcr:primaryType="cq:Widget"
+            title="Layouts"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <listFrom
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Select Component"
+                    name="./listFrom"
+                    type="select"
+                    xtype="selection">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                        selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <fulltext
+                            jcr:primaryType="nt:unstructured"
+                            text="Full Text"
+                            value="fulltext"/>
+                        <fulltextwithframe
+                            jcr:primaryType="nt:unstructured"
+                            text="Full Text With Frame"
+                            value="fulltextwithframe"/>
+                        <imagetext
+                            jcr:primaryType="nt:unstructured"
+                            text="Image Text"
+                            value="imagetext"/>
+                        <imagetextwithframe
+                            jcr:primaryType="nt:unstructured"
+                            text="Image Text With Frame"
+                            value="imagetextwithframe"/>
+                        <imageplustext
+                            jcr:primaryType="nt:unstructured"
+                            text="Image Plus Text"
+                            value="imageplustext"/>
+                    </options>
+                </listFrom>
+                <bgcolor
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Background Color"
+                    name="./bgcolor"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <navy-blue
+                            jcr:primaryType="nt:unstructured"
+                            text="Navy Blue"
+                            value="bg-navy-blue"/>
+                        <light-blue
+                            jcr:primaryType="nt:unstructured"
+                            text="Light Blue"
+                            value="bg-light-blue"/>
+                        <medtronic-blue
+                            jcr:primaryType="nt:unstructured"
+                            text="Medtronic Blue"
+                            value="bg-medtronic-blue"/>
+                        <sky-blue
+                            jcr:primaryType="nt:unstructured"
+                            text="Sky Blue"
+                            value="bg-sky-blue"/>
+                        <cobalt-blue
+                            jcr:primaryType="cq:Widget"
+                            text="Cobalt Blue"
+                            value="bg-cobalt-blue"/>
+                        <light-gray
+                            jcr:primaryType="nt:unstructured"
+                            text="Light Gray"
+                            value="bg-light-gray"/>
+                        <white
+                            jcr:primaryType="nt:unstructured"
+                            text="White"
+                            value="bg-white"/>
+                    </options>
+                </bgcolor>
+                <gridReverse
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Grid Reverse"
+                    name="./gridReverse"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </list>
+        <fulltext
+            jcr:primaryType="cq:Widget"
+            title="Full Text"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <line1
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 1:"
+                    name="./fulltextl1"
+                    xtype="textfield"/>
+                <line2
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 2:"
+                    name="./fulltextl2"
+                    xtype="textfield"/>
+            </items>
+        </fulltext>
+        <fulltextwithframe
+            jcr:primaryType="cq:Widget"
+            title="Full Text With Frame"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(2); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <line1
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 1:"
+                    name="./fulltextwithframel1"
+                    xtype="textfield"/>
+                <line2
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 2:"
+                    name="./fulltextwithframel2"
+                    xtype="textfield"/>
+            </items>
+        </fulltextwithframe>
+        <imagetext
+            jcr:primaryType="cq:Widget"
+            title="Image Text"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(3); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <line1
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 1:"
+                    name="./imagetextl1"
+                    xtype="textfield"/>
+                <line2
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 2:"
+                    name="./imagetextl2"
+                    xtype="textfield"/>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Image:"
+                    name="./image"
+                    xtype="pathfield"/>
+            </items>
+        </imagetext>
+        <imagetextwithframe
+            jcr:primaryType="cq:Widget"
+            title="Image Text with Frame"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(4); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <line1
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 1:"
+                    name="./imagetextwithframel1"
+                    xtype="textfield"/>
+                <line2
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 2:"
+                    name="./imagetextwithframel2"
+                    xtype="textfield"/>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Image:"
+                    name="./imagewithframe"
+                    xtype="pathfield"/>
+            </items>
+        </imagetextwithframe>
+        <imageplustext
+            jcr:primaryType="cq:Widget"
+            title="Image Text with Frame"
+            xtype="panel">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(5); }"/>
+            <items jcr:primaryType="cq:WidgetCollection">
+                <line1
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 1:"
+                    name="./imageplustextl1"
+                    xtype="textfield"/>
+                <line2
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Line 2:"
+                    name="./imageplustextl2"
+                    xtype="textfield"/>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Image:"
+                    name="./imageplus"
+                    xtype="pathfield"/>
+            </items>
+        </imageplustext>
+    </items>
+</jcr:root>

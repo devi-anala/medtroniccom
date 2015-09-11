@@ -1,0 +1,126 @@
+<div data-sly-test="${!properties.displayAs && wcmmode.edit}"
+   data-sly-unwrap="${!wcmmode.edit}">Placeholder for edit icon
+   of recipient.</div>
+<div class='${properties.bgcolor} ${properties.gridReverse ? "grid--reverse" : ""}'>
+
+<div data-sly-test="${properties.listFrom=='fulltext'}" data-sly-unwrap>    
+       <!-- one column hero (full) -->
+<div class="row hero hero--full hero--text bg-cobalt-blue">
+	<div class="content">
+    <div class="display-table">
+      <div class="display-table-cell">
+        <h2>
+          <span>${properties.fulltextl1}</span>
+                  <span class="bold light-orange">${properties.fulltextl2}</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div data-sly-test="${properties.listFrom=='fulltextwithframe'}" data-sly-unwrap>                    
+        <!-- one column hero (full) with frame -->
+<div class="row hero hero--full hero--text hero__frame bg-cobalt-blue">
+	<div class="content">
+    <div class="display-table">
+     <div class="display-table-cell">
+
+<h2>
+
+		<span>${properties.fulltextwithframel1}</span>
+
+		<span class="bold navy-blue">${properties.fulltextwithframel2}</span>
+
+</h2>
+	<p class="white">Changing the way the world experiences healthcare requires that we all do more, in new ways, with new partners.</p> 
+	<a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div data-sly-test="${properties.listFrom=='imagetext'}" data-sly-unwrap>                   
+        <!-- two column hero, (half), no decoration -->
+<div class="row hero">
+	<div class='${properties.gridReverse ? "grid--reverse" : ""}'"col-md-6 two-by-two bg-white hero--media" style="background-image:url(/content/dam/atlas/Situational-2.jpg);">
+		<div class="content">
+			<div class="display-table">
+				<div class="display-table-cell">
+				</div>
+			</div>
+		</div>
+	</div>
+
+ 	<div class="col-md-6 two-by-two hero--text bg-navy-blue">
+		<div class="content">
+      <div class="display-table">
+        <div class="display-table-cell">
+          <h2>
+	          <span>${properties.imagetextl1}</span>
+                  <span class="bold light-orange">${properties.imagetextl2}</span>
+	        </h2>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+</div>
+
+<div data-sly-test="${properties.listFrom=='imagetextwithframe'}" data-sly-unwrap> 
+        <!-- two column hero (half) with frame -->
+<div class="row hero hero__frame">
+	<div class="col-md-6 two-by-two bg-navy-blue hero--media" style="background-image:url(/content/dam/atlas/Situational-2.jpg);">
+		<div class="content">
+      <div class="display-table">
+        <div class="display-table-cell">
+        </div>
+      </div>
+    </div>
+	</div>
+
+ 	<div class="col-md-6 two-by-two hero--text bg-medtronic-blue">
+		<div class="content">
+      <div class="display-table">
+        <div class="display-table-cell">
+          <h2>
+	          <span>${properties.imagetextwithframel1}</span>
+                  <span class="bold light-orange">${properties.imagetextwithframel2}</span>
+	        </h2>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+</div>
+
+<div data-sly-test="${properties.listFrom=='imageplustext'}" data-sly-unwrap>
+<!-- two column hero (half) with plus -->
+<div class="row hero">
+  <div class="icon__plus"></div>
+	<div class="col-md-6 two-by-two bg-white hero--media" style="background-image:url(/content/dam/atlas/Situational-2.jpg);">
+		<div class="content">
+      <div class="display-table">
+        <div class="display-table-cell">
+        </div>
+      </div>
+    </div>
+	</div>
+
+ 	<div class="col-md-6 two-by-two hero--text bg-sky-blue">
+		<div class="content">
+      <div class="display-table">
+        <div class="display-table-cell">
+          <h2>
+	          <span>${properties.imageplustextl1}</span>
+                  <span class="bold light-orange">${properties.imageplustextl2}</span>
+	        </h2>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+</div>
+
+<div class="clear"></div>
