@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1441983334850
+Bnd-LastModified: 1442342462933
 Build-Jdk: 1.7.0_79
 Built-By: devi.anala
 Bundle-Description: Core bundle for "Medtroniccom"

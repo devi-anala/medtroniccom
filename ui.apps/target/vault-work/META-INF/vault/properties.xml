@@ -4,7 +4,7 @@
 <comment>"Medtroniccom" - UI apps</comment>
 <entry key="createdBy">devi.anala</entry>
 <entry key="name">medtroniccom.ui.apps</entry>
-<entry key="created">2015-09-11T09:55:35.864-0500</entry>
+<entry key="created">2015-09-15T09:29:37.364-0500</entry>
 <entry key="groupId">org.medtroniccom</entry>
 <entry key="version">1.0-SNAPSHOT</entry>
 <entry key="requiresRoot">false</entry>
